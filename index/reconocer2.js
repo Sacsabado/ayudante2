@@ -1,6 +1,11 @@
 const textoReconocidoElement = document.querySelector("p")
 const boton = document.querySelector("button")
-
+function repetirTexto(texto){
+    const letra = texto;
+    const synth = window.speechSynthesis;
+    const speechUtterance = new SpeechSynthesisUtterance(letra);
+    synth.speak(speechUtterance);
+}
 if ("webkitSpeechRecognition" in window) {
     const reconocimiento = new webkitSpeechRecognition();
 
